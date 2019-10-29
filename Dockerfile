@@ -1,10 +1,11 @@
 FROM ubuntu:xenial
-MAINTAINER Josh Lukens <jlukens@botch.com>
+MAINTAINER Chris Ghormley <chris@ghormley.net>
 
 ENV SQUEEZE_VOL /srv/squeezebox
-ENV LANG C.UTF-8
+ENV LANG en_US.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
-ENV BASESERVER_URL=http://downloads.slimdevices.com/nightly/7.9/sc/
+# use an earlier version for troubleshooting
+ENV BASESERVER_URL=http://downloads.slimdevices.com/nightly/7.7/sc/
 ENV PERL_MM_USE_DEFAULT 1
 
 RUN buildDeps='build-essential libssl-dev libffi-dev python-pip python-dev' && \
